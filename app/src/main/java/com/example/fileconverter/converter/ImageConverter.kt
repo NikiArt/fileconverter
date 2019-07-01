@@ -1,8 +1,8 @@
 package com.example.fileconverter.converter
 
-import com.example.fileconverter.conversation.MyConversation
+import com.example.fileconverter.conversion.MyConversion
 import io.reactivex.Completable
 
 interface ImageConverter {
-    fun convertJpegToPng(meta: MyConversation): Completable
+    fun convertJpegToPng(meta: MyConversion): Completable
 }

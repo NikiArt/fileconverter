@@ -5,12 +5,12 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.provider.MediaStore
 import android.util.Log
-import com.example.fileconverter.conversation.MyConversation
+import com.example.fileconverter.conversion.MyConversion
 import io.reactivex.Completable
 
 class MyConverter(private val context: Context) : ImageConverter {
 
-    override fun convertJpegToPng(meta: MyConversation): Completable {
+    override fun convertJpegToPng(meta: MyConversion): Completable {
         return Completable.create {
             Thread.sleep(10000)
             val bitmap = MediaStore.Images.Media.getBitmap(context.contentResolver, Uri.parse(meta.getSrc()))
